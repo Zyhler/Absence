@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿
+
+<!DOCTYPE html PUBLIC>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -9,6 +11,10 @@
 </head>
 <body>
     <header>
+
+
+
+
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-page="/Index">Absence</a>
@@ -32,14 +38,19 @@
                         </li>
 
                     </ul>
-                    <div class="dropdown">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li id="LoginLink" class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Login">Login</a>
+                        </li>
+                    </ul>
+                    <div id="LoggedInMenu" class="dropdown invisible">
                         <button class="navbar-toggler-icon btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                           
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Account">Account</a>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Orders">My Orders</a>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/MyDeliveries">My Deliveries</a>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Logout">Logout</a>
                         </div>
                     </div>
                 </div>
@@ -54,7 +65,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2021 - Absence - <a asp-area="" asp-page="/Privacy">Privacy</a>
+            &copy; 2021 - Absence - <a asp-area="" asp-page="/Privacy">Privacy</a> - <a asp-area="" asp-page="/Contact">Contact</a>
         </div>
     </footer>
 
