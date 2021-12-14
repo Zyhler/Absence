@@ -1,0 +1,22 @@
+[
+  {
+    "Id": 1,
+    "Name": "1kg hakkekød",
+    "Price": 50
+  },
+  {
+    "Id": 2,
+    "Name": "blandet salat",
+    "Price": 10
+  },
+  {
+    "Id": 3,
+    "Name": "blandet krydderi kasse",
+    "Price": 50
+  },
+  {
+    "Id": 4,
+    "Name": "multijuice",
+    "Price": 15
+  }
+]
