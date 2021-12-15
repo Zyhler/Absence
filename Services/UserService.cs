@@ -11,13 +11,13 @@ namespace Absence.Services
     public class UserService : IUserService
     {
 
-        private List<USer> users;
+        private List<User> users;
         private JsonFileUserService JsonFileUserService { get; set; }
 
         public UserService(JsonFileUserService jsonFileUserService)
         {
             JsonFileUserService = jsonFileUserService;
-            //items = MockItems.GetMockItems();
+            //users = Mockusers.GetMockusers();
             users = JsonFileUserService.GetJsonUsers().ToList();
         }
 
@@ -27,86 +27,74 @@ namespace Absence.Services
             JsonFileUserService.SaveJsonUsers(users);
         }
 
-        public IEnumerable<Item> GetItems()
+        public IEnumerable<User> GetUsers()
         {
-            return items;
+            return users;
         }
 
-        public Item GetItem(int id)
+        public User GetUser(int id)
         {
-            foreach (Item item in items)
+            foreach (User oneUser in users)
             {
-                if (item.Id == id) return item;
+                if (oneUser.Id == id) return oneUser;
             }
             return null;
         }
 
-        public Item DeleteItem(int itemId)
+        //public user Deleteuser(int userId)
+        //{
+        //    user userToBeDeleted = null;
+        //    foreach (user i in users)
+        //    {
+        //        if (i.Id == userId)
+        //        {
+        //            userToBeDeleted = i;
+        //            break;
+        //        }
+
+        //    }
+
+        //    if (userToBeDeleted != null)
+        //    {
+        //        users.Remove(userToBeDeleted);
+        //        JsonFileuserService.SaveJsonusers(users);
+        //    }
+
+        //    return userToBeDeleted;
+        //}
+
+
+        public void Updateuser(User user)
         {
-            Item itemToBeDeleted = null;
-            foreach (Item i in items)
+            if (user != null)
             {
-                if (i.Id == itemId)
+                foreach (User i in users)
                 {
-                    itemToBeDeleted = i;
-                    break;
-                }
-
-            }
-
-            if (itemToBeDeleted != null)
-            {
-                items.Remove(itemToBeDeleted);
-                JsonFileItemService.SaveJsonItems(items);
-            }
-
-            return itemToBeDeleted;
-        }
-
-
-        public void UpdateItem(Item item)
-        {
-            if (item != null)
-            {
-                foreach (Item i in items)
-                {
-                    if (i.Id == item.Id)
+                    if (i.Id == user.Id)
                     {
-                        i.Name = item.Name;
-                        i.Price = item.Price;
+                        //i.Name = user.Name;
+                        //i.Price = user.Price;
                     }
                 }
-                JsonFileItemService.SaveJsonItems(items);
+                JsonFileUserService.SaveJsonUsers(users);
             }
         }
 
-        public IEnumerable<Item> NameSearch(string str)
-        {
-            List<Item> nameSearch = new List<Item>();
-            foreach (Item item in items)
-            {
-                if (item.Name.ToLower().Contains(str.ToLower()))
-                {
-                    nameSearch.Add(item);
-                }
-            }
+        //public IEnumerable<User> NameSearch(string str)
+        //{
+        //    List<user> nameSearch = new List<user>();
+        //    foreach (user user in users)
+        //    {
+        //        if (user.Name.ToLower().Contains(str.ToLower()))
+        //        {
+        //            nameSearch.Add(user);
+        //        }
+        //    }
 
-            return nameSearch;
-        }
+        //    return nameSearch;
+        //}
 
-        public IEnumerable<Item> PriceFilter(int maxPrice, int minPrice = 0)
-        {
-            List<Item> filterList = new List<Item>();
-            foreach (Item item in items)
-            {
-                if (item.Price>=minPrice && item.Price<=maxPrice)
-                {
-                    filterList.Add(item);
-                }
-            }
-
-            return filterList;
-        }
+       
 
     }
 }

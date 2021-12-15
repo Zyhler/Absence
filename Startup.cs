@@ -32,7 +32,7 @@ namespace Absence
             services.AddRazorPages();
             services.AddSingleton<ItemService, ItemService>();
             services.AddTransient<JsonFileItemService>();
-            services.AddSingleton<UserService, UserService>();
+            services.AddSingleton<Services.UserService, Services.UserService>();
             services.AddTransient<JsonFileUserService>();
         }
 
