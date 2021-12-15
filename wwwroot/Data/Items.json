@@ -1,7 +1,7 @@
 [
   {
     "Id": 1,
-    "Name": "1kg hakkekød",
+    "Name": "1kg hakkek\uFFFDd",
     "Price": 50
   },
   {
@@ -18,5 +18,10 @@
     "Id": 4,
     "Name": "multijuice",
     "Price": 15
+  },
+  {
+    "Id": 9,
+    "Name": "iste",
+    "Price": 6
   }
 ]
