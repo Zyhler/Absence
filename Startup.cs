@@ -32,6 +32,8 @@ namespace Absence
             services.AddRazorPages();
             services.AddSingleton<ItemService, ItemService>();
             services.AddTransient<JsonFileItemService>();
+            services.AddSingleton<Services.UserService, Services.UserService>();
+            services.AddTransient<JsonFileUserService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

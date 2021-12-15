@@ -15,4 +15,9 @@ namespace Absence.Services
 
         IEnumerable<Item> PriceFilter(int maxPrice, int minPrice = 0);
     }
+    interface IUserService
+    {
+        IEnumerable<User> GetUsers();
+        void AddUser(User user);
+    }
 }
