@@ -3,3 +3,39 @@
 @{
     ViewData["Title"] = "Login";
 }
+
+
+<div class="container border" style="padding:20px">
+    <form method="post">
+        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="Credentials.UserName"></label>
+            </div>
+            <div class="col-3">
+                <input type="text" asp-for="Credentials.UserName" class="form-control" />
+            </div>
+            <span class="text-danger" asp-validation-for="Credentials.UserName"></span>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="Credentials.Password"></label>
+            </div>
+            <div class="col-3">
+                <input type="password" asp-for="Credentials.Password" class="form-control" />
+            </div>
+            <span class="text-danger" asp-validation-for="Credentials.Password"></span>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-2">
+                <input type="submit" class="btn btn-primary" value="Login"/>
+            </div>
+            <div class="col-3">
+                <a class="nav-link text-dark" asp-area="" asp-page="/CreateLogin">Create a new account</a>
+            </div>
+        </div>
+    </form>
+
+</div>

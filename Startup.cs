@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Absence.Models;
+using Absence.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,8 +25,13 @@ namespace Absence
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddAuthentication().AddCookie("MyCookieAuth", options => {
+                options.Cookie.Name = "MyCookieAuth";
+            });
+
             services.AddRazorPages();
-            
+            services.AddSingleton<ItemService, ItemService>();
+            services.AddTransient<JsonFileItemService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
