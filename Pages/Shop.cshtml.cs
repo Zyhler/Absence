@@ -9,6 +9,11 @@ namespace Absence.Pages
 {
     public class ShopModel : PageModel
     {
+        
+        
+
+
+
         public void OnGet()
         {
         }
