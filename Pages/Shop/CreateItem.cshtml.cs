@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
@@ -14,6 +15,7 @@ namespace Absence.Pages
     {
         private ItemService itemService;
         private List<Models.Item> items;
+        
        
         [BindProperty]
         public Models.Item Item { get; set; }
@@ -22,6 +24,14 @@ namespace Absence.Pages
         {
             itemService = iS;
             items = itemService.GetItems().ToList();
+        }
+        public void AssignID()
+        {
+            //foreach (Models.Item oneItem in items)
+            //{
+            //    oneItem.Id = items.IndexOf(oneItem) + 1;
+            //}
+            Item.Id = items.Last().Id + 1;
         }
         public IActionResult OnGet()
         {
@@ -33,6 +43,7 @@ namespace Absence.Pages
             {
                 return Page();
             }
+            AssignID();
             itemService.AddItem(Item);
             return RedirectToPage("GetAllItems");
         }

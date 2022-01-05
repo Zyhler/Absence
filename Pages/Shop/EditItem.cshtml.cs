@@ -11,14 +11,11 @@ namespace Absence.Pages.Shop
     public class EditItemModel : PageModel
     {
         private ItemService itemService;
-
+        
         [BindProperty]
         public Models.Item Item { get; set; }
 
-        public EditItemModel(ItemService itemService)
-        {
-            this.itemService = itemService;
-        }
+        
         public IActionResult OnGet(int id)
         {
             Item = itemService.GetItem(id);
@@ -26,6 +23,10 @@ namespace Absence.Pages.Shop
                 return RedirectToPage("/NotFound"); //NotFound er ikke defineret endnu
 
             return Page();
+        }
+        public EditItemModel(ItemService itemService)
+        {
+            this.itemService = itemService;
         }
 
         public IActionResult OnPost()
