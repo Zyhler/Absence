@@ -77,12 +77,17 @@
                     <!-- Call to action buttons -->
                     <ul class="list-inline m-0">
                         <li class="list-inline-item">
-                            <a class="btn btn-primary btn-sm" type="button" data-toggle="tooltip" title="Edit" asp-page="EditItem" asp-route-id="@item.Id"><i class="fa fa-edit"></i></a>
+                            <a class="btn btn-primary btn-sm" type="button" data-toggle="tooltip" title="Add to Cart" ><i class="fa fa-cart-plus"></i></a>
                         </li>
-                        <li class="list-inline-item">
-                            <a class="btn btn-danger btn-sm " type="button" data-toggle="tooltip" data-placement="top" title="Delete" asp-page="DeleteItem" asp-route-id="@item.Id"><i class="fa fa-trash"></i></a>
-                        </li>
-                    </ul>
+                    </ul> <br>
+                        <ul class="list-inline m-0">
+                            <li class="list-inline-item">
+                                <a class="btn btn-primary btn-sm" type="button" data-toggle="tooltip" title="Edit" asp-page="EditItem" asp-route-id="@item.Id"><i class="fa fa-edit"></i></a>
+                            </li>
+                            <li class="list-inline-item ">
+                                <a class="btn btn-danger btn-sm " type="button" data-toggle="tooltip" data-placement="top" title="Delete" asp-page="DeleteItem" asp-route-id="@item.Id"><i class="fa fa-trash"></i></a>
+                            </li>
+                        </ul>
                 </td>
             </tr>
         }

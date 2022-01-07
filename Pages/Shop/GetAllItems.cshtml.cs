@@ -1,9 +1,15 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
+using System.Net;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Absence.Models;
 using Absence.Services;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
@@ -24,6 +30,10 @@ namespace Absence.Pages
 
         public IActionResult OnGet()
         {
+            //if (MyAuthCookie == false)
+            //{
+            //    return RedirectToPage("Index");
+            //}
             Items = itemService.GetItems().ToList();
             return Page();
         }
