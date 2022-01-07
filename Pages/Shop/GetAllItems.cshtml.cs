@@ -8,10 +8,12 @@ using System.Threading.Tasks;
 using Absence.Models;
 using Absence.Services;
 using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Absence.Pages
 {
@@ -30,6 +32,8 @@ namespace Absence.Pages
 
         public IActionResult OnGet()
         {
+            var req = HttpContext.RequestServices.ToString();
+            
             //if (MyAuthCookie == false)
             //{
             //    return RedirectToPage("Index");
