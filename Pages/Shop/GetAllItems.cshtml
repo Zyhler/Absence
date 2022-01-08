@@ -1,6 +1,9 @@
 ﻿@page "{handler?}"
+@using System.Security.Claims
+@using Microsoft.Extensions.DependencyInjection
 @model Absence.Pages.GetAllItemsModel
 @{
+    var req = "UpdateDis";
 }
 <h1>Shop</h1>
 <br />
@@ -99,8 +102,5 @@
     <a class="btn btn-primary" data-toggle="tooltip" title="Add Item" asp-page="CreateItem"><i class="fa fa-plus-square mr-1"></i> Create a new Item </a>
 </p>
 <br />
-@{
-    var outsideTemp = 79;
-    var weatherMessage = "Hello, it is " + outsideTemp + " degrees.";
-}
-<p>text: @weatherMessage</p>
+
+<p>text: @req</p>
