@@ -1,7 +1,7 @@
 [
   {
     "Id": 1,
-    "Name": "1kg hakkek\uFFFDd",
+    "Name": "1kg hakkekoed",
     "Price": 50
   },
   {
@@ -12,11 +12,21 @@
   {
     "Id": 3,
     "Name": "blandet krydderi kasse",
-    "Price": 50
+    "Price": 55
   },
   {
     "Id": 4,
     "Name": "multijuice",
     "Price": 15
+  },
+  {
+    "Id": 5,
+    "Name": "is-te",
+    "Price": 5
+  },
+  {
+    "Id": 6,
+    "Name": "Viking",
+    "Price": 1234
   }
 ]

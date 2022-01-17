@@ -33,7 +33,10 @@ namespace Absence.Pages
             {
                 return Page();
             }
+
+            User.Id = users.Count + 1;
             userService.AddUser(User);
+            
             return RedirectToPage("index");
         }
 

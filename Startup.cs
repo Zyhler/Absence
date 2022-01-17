@@ -28,7 +28,9 @@ namespace Absence
             services.AddAuthentication("MyCookieAuth").AddCookie("MyCookieAuth", options => {
                 options.Cookie.Name = "MyCookieAuth";
             });
-
+            services.AddSession();
+            services.AddMemoryCache();
+            services.AddMvc();
             services.AddRazorPages();
             services.AddSingleton<ItemService, ItemService>();
             services.AddTransient<JsonFileItemService>();

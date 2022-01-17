@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.Diagnostics.Eventing.Reader;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Security.Claims;
@@ -18,7 +19,7 @@ namespace Absence.Pages
         
         public void OnGet()
         {
-         
+            
         }
         public async Task<IActionResult> OnPostAsync()
         {
@@ -41,6 +42,7 @@ namespace Absence.Pages
                 ClaimsPrincipal claimsPrincipal = new ClaimsPrincipal(identity);
 
                 await HttpContext.SignInAsync("MyCookieAuth", claimsPrincipal);
+                
 
                 return RedirectToPage("/Index");
             }

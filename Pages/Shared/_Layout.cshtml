@@ -5,18 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Absence</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap-utilities.css" rel="stylesheet" />
     <link rel="stylesheet" href="~/css/site.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    
 </head>
 <body>
     <header>
 
-
-
-
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">Absence</a>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light navbar-bg border-bottom box-shadow mb-3">
+            <div class="container webkit">
+                <a class="navbar-brand text-white" asp-area="" asp-page="/Index">Absence</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -27,7 +26,7 @@
                             <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="Shop/GetAllItems">Shop</a>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Shop">Shop</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Delivery">Do a Delivery</a>
@@ -62,14 +61,14 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2021 - Absence - <a asp-area="" asp-page="/Privacy">Privacy</a> - <a asp-area="" asp-page="/About">About us </a>- <a asp-area="" asp-page="/Contact">Contact</a>
+    <footer class="footer">
+        <div class="container webkit">
+            &copy; 2021 - Absence - <a class="link-light" asp-area="" asp-page="/Privacy">Privacy</a> - <a class="link-light" asp-area="" asp-page="/About">About us </a>- <a class="link-light" asp-area="" asp-page="/Contact">Contact</a>
         </div>
     </footer>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
