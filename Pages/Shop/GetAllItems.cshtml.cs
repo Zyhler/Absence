@@ -19,7 +19,7 @@ namespace Absence.Pages
 {
     public class GetAllItemsModel : PageModel
     {
-        public string UpdateCheck = "Not Updated";
+        //public string UpdateCheck = "Not Updated";
         private ItemService itemService;
         public List<Models.Item> Items { get; private set; }
         [BindProperty] public string SearchString { get; set; }
@@ -43,7 +43,7 @@ namespace Absence.Pages
 
         public IActionResult OnPostNameSearch()
         {
-            UpdateCheck = "updated";
+            //UpdateCheck = "updated";
             Items = itemService.NameSearch(SearchString).ToList();
             return Page();
         }
