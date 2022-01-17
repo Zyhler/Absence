@@ -4,10 +4,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.Design.Serialization;
 using System.Diagnostics.Eventing.Reader;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Security.Claims;
+using System.Security.Principal;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Http;
 
@@ -44,6 +46,7 @@ namespace Absence.Pages
 
                 HttpContext.Session.SetInt32("Login", 1);
                 HttpContext.Session.SetString("username", Credentials.UserName);
+                //ViewData["Logstatus"] = "logout";
 
                 await HttpContext.SignInAsync("MyCookieAuth", claimsPrincipal);
                 
@@ -56,6 +59,7 @@ namespace Absence.Pages
             }
 
             return Page();
+            
         }
         
         public class Credential

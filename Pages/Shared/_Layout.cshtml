@@ -1,7 +1,6 @@
-﻿@using Microsoft.AspNetCore.Http;
-@using System.Security.Cryptography.X509Certificates
-@using System.Security.Claims
-@using System.Net.Http
+﻿@{
+    ViewData["Logstatus"] = "Login";
+}
 <!DOCTYPE html PUBLIC>
 <html lang="en">
 <head>
@@ -12,7 +11,6 @@
     <link href="~/lib/bootstrap/dist/css/bootstrap-utilities.css" rel="stylesheet" />
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
-
 </head>
 <body>
     <header>
@@ -41,22 +39,25 @@
 
                     </ul>
                     <ul class="navbar-nav flex-grow-1">
-                       @if()
-                        
+                        @*@if (ViewData["Logstatus"] == "Logout")
                         {
                             <li id="logout" class="nav-item">
                                 <form method="post">
                                     <button type="submit" class="nav-link btn btn-link"></button>
                                 </form>
-                                <a class="nav-link text-dark" asp-area="" asp-page="Logout">Logout</a>
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Logout">Logout</a>
                             </li>
-                        }
-                        else
-                        {
+                        }*@
+                        @*else
+                        {*@
                             <li id="LoginLink" class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-page="/Login">Login</a>
+                                <a class="nav-link text-dark" asp-area="" asp-page="/login">login</a>
                             </li>
-                        }
+                        @*}*@
+
+
+
+
 
                     </ul>
                     <div id="LoggedInMenu" class="dropdown invisible">

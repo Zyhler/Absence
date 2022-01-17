@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Session;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -30,7 +31,6 @@ namespace Absence
             });
             services.AddSession();
             services.AddMemoryCache();
-            services.AddMvc();
             services.AddRazorPages();
             services.AddSingleton<ItemService, ItemService>();
             services.AddTransient<JsonFileItemService>();
@@ -58,6 +58,7 @@ namespace Absence
             app.UseRouting();
 
             app.UseAuthentication();
+            app.UseSession();
 
             app.UseAuthorization();
 

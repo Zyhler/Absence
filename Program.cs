@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
@@ -6,7 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
+using HttpContext = Microsoft.AspNetCore.Http.HttpContext;
 
 namespace Absence
 {
@@ -15,7 +16,6 @@ namespace Absence
         public static void Main(string[] args)
         {
             CreateHostBuilder(args).Build().Run();
-            
 
         }
 
