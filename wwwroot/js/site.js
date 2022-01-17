@@ -4,4 +4,4 @@
 // Write your JavaScript code.
 
 
-document.getElementById("LoginLink").className += "invisible";
+// document.getElementById("LoginLink").className += "invisible";
