@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Absence.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Absence.Pages.Item
 {
+    [Authorize(Policy = "MustBeAdmin")]
     public class DeleteItemModel : PageModel
     {
         private ItemService itemService;

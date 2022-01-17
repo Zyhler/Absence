@@ -36,7 +36,8 @@ namespace Absence.Pages
                 //Creating Security Context
                 var claims = new List<Claim> {
                     new Claim(ClaimTypes.Name, "admin"),
-                    new Claim(ClaimTypes.Email, "admin@admin.com")
+                    new Claim(ClaimTypes.Email, "admin@admin.com"),
+                    new Claim("Department", "Admin")
 
                 };
                 

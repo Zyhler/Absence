@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using Absence.Models;
 using Absence.Services;
 using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
@@ -17,8 +18,13 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace Absence.Pages
 {
+
+    [Authorize(Policy = "MustBeAdmin")]
     public class GetAllItemsModel : PageModel
     {
+
+      
+
         //public string UpdateCheck = "Not Updated";
         private ItemService itemService;
         public List<Models.Item> Items { get; private set; }

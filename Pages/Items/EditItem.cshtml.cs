@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Absence.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Absence.Pages.Shop
 {
+    [Authorize(Policy = "MustBeAdmin")]
     public class EditItemModel : PageModel
     {
         private ItemService itemService;

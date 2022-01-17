@@ -28,7 +28,16 @@ namespace Absence
         {
             services.AddAuthentication("MyCookieAuth").AddCookie("MyCookieAuth", options => {
                 options.Cookie.Name = "MyCookieAuth";
+                options.LoginPath = "/Login";
             });
+
+            services.AddAuthorization(options =>
+            {
+            options.AddPolicy("MustBeAdmin",
+                policy => policy.RequireClaim("Department", "Admin")
+                    );
+            });
+
             services.AddSession();
             services.AddMemoryCache();
             services.AddRazorPages();
