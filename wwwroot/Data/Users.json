@@ -63,5 +63,57 @@
     "AuthLvL": false,
     "NrOrders": 0,
     "NrDelivs": 0
+  },
+  {
+    "Id": 6,
+    "Mail": "icyxgram@gmail.com",
+    "FirstName": "Tim",
+    "SurName": "LS",
+    "Password": "egeg",
+    "Address": "l\u00F8jvej 5",
+    "Zip": 8585,
+    "Phone": "23152352",
+    "AuthLvL": false,
+    "NrOrders": 0,
+    "NrDelivs": 0
+  },
+  {
+    "Id": 7,
+    "Mail": "tim@gmail.com",
+    "FirstName": "Tim",
+    "SurName": "LS2",
+    "Password": "egeg",
+    "Address": "hejhej 542",
+    "Zip": 8585,
+    "Phone": "39482552",
+    "AuthLvL": false,
+    "NrOrders": 0,
+    "NrDelivs": 0
+  },
+  {
+    "Id": 8,
+    "Mail": "tim@gmail.com",
+    "FirstName": "Tim",
+    "SurName": "LS3",
+    "Password": "great",
+    "Address": "Tygevej 25",
+    "Zip": 4840,
+    "Phone": "56125235",
+    "AuthLvL": false,
+    "NrOrders": 0,
+    "NrDelivs": 0
+  },
+  {
+    "Id": 9,
+    "Mail": "tlar@gmail.com",
+    "FirstName": "Total",
+    "SurName": "Anarky",
+    "Password": "sonsofanarky",
+    "Address": "harleyvej 236",
+    "Zip": 3535,
+    "Phone": "42674507",
+    "AuthLvL": false,
+    "NrOrders": 0,
+    "NrDelivs": 0
   }
 ]

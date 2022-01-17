@@ -4,39 +4,39 @@
     ViewData["Title"] = "Create Login";
 }
 
-<h1>CreateEvent</h1>
+<h1>Create User</h1>
 
 <div class="row">
     <div class="col-md-4">
         <form method="post">
             <div class="form-group">
-                <label asp-for="@Model.User.Mail" class="control-label"></label>
+                <label asp-for="@Model.User.Mail" class="control-label">E-Mail:</label>
                 <input type="email" asp-for="@Model.User.Mail" class="form-control" />
             </div>
             <div class="form-group">
-                <label asp-for="@Model.User.FirstName" class="control-label"></label>
+                <label asp-for="@Model.User.FirstName" class="control-label">First Name:</label>
                 <input asp-for="@Model.User.FirstName" class="form-control" />
             </div>
             <div class="form-group">
-                <label asp-for="@Model.User.SurName" class="control-label"></label>
+                <label asp-for="@Model.User.SurName"  class="control-label">Sur Name:</label>
                 <input asp-for="@Model.User.SurName" class="form-control" />
 
             </div>
             <div class="form-group">
-                <label asp-for="@Model.User.Password" class="control-label"></label>
+                <label asp-for="@Model.User.Password" class="control-label">Password:</label>
                 <input type="password" asp-for="@Model.User.Password" class="form-control" />
 
             </div>
             <div class="form-group">
-                <label asp-for="@Model.User.Address" class="control-label"></label>
+                <label asp-for="@Model.User.Address" class="control-label">Address:</label>
                 <input asp-for="@Model.User.Address" class="form-control" />
             </div>
             <div class="form-group">
-                <label asp-for="@Model.User.Zip" class="control-label"></label>
+                <label asp-for="@Model.User.Zip" class="control-label">Zip-Code:</label>
                 <input asp-for="@Model.User.Zip" class="form-control" />
             </div>
             <div class="form-group">
-                <label asp-for="@Model.User.Phone" class="control-label"></label>
+                <label asp-for="@Model.User.Phone" class="control-label">Phone:</label>
                 <input asp-for="@Model.User.Phone" class="form-control" />
 
             </div>
