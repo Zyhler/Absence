@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Http;
 
 namespace Absence.Pages
 {
@@ -32,16 +33,24 @@ namespace Absence.Pages
                     new Claim(ClaimTypes.Email, "admin@admin.com")
 
                 };
-
+                
                 var identity = new ClaimsIdentity(claims, "MyCookieAuth");
 
                 ClaimsPrincipal claimsPrincipal = new ClaimsPrincipal(identity);
 
+                HttpContext.Session.SetInt32("Login", 1);
+                HttpContext.Session.SetString("username", Credentials.UserName);
+
                 await HttpContext.SignInAsync("MyCookieAuth", claimsPrincipal);
                 
-
+                
                 return RedirectToPage("/Index");
             }
+            else
+            {
+                
+            }
+
             return Page();
         }
         

@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html PUBLIC>
+﻿@using Microsoft.AspNetCore.Http;
+@using System.Security.Cryptography.X509Certificates
+@using System.Security.Claims
+@using System.Net.Http
+<!DOCTYPE html PUBLIC>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -8,7 +12,7 @@
     <link href="~/lib/bootstrap/dist/css/bootstrap-utilities.css" rel="stylesheet" />
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
-    
+
 </head>
 <body>
     <header>
@@ -37,9 +41,23 @@
 
                     </ul>
                     <ul class="navbar-nav flex-grow-1">
-                        <li id="LoginLink" class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Login">Login</a>
-                        </li>
+                       @if()
+                        
+                        {
+                            <li id="logout" class="nav-item">
+                                <form method="post">
+                                    <button type="submit" class="nav-link btn btn-link"></button>
+                                </form>
+                                <a class="nav-link text-dark" asp-area="" asp-page="Logout">Logout</a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li id="LoginLink" class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Login">Login</a>
+                            </li>
+                        }
+
                     </ul>
                     <div id="LoggedInMenu" class="dropdown invisible">
                         <button class="navbar-toggler-icon btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

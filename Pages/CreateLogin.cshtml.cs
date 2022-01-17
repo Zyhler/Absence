@@ -41,10 +41,7 @@ namespace Absence.Pages
         }
 
     }
-    //public void OnGet()
-    //    {
-
-    //    }
+  
 
         
 

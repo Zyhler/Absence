@@ -1,18 +1,5 @@
 [
   {
-    "Id": 15,
-    "Mail": null,
-    "FirstName": "Mort",
-    "SurName": "Lars",
-    "Password": null,
-    "Address": "hejvej 52",
-    "Zip": 4200,
-    "Phone": "61469696",
-    "AuthLvL": false,
-    "NrOrders": 0,
-    "NrDelivs": 0
-  },
-  {
     "Id": 1,
     "Mail": null,
     "FirstName": "Morten",
