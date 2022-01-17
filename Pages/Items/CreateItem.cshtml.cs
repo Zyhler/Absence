@@ -6,11 +6,13 @@ using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using Absence.Models;
 using Absence.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Absence.Pages
 {
+    [Authorize(Policy = "MustBeAdmin")]
     public class CreateItemModel : PageModel
     {
         private ItemService itemService;
