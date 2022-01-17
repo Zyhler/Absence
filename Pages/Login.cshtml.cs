@@ -23,9 +23,13 @@ namespace Absence.Pages
         public async Task<IActionResult> OnPostAsync()
         {
             if (!ModelState.IsValid) return Page();
+             
 
+            // Verify Credential
             if(Credentials.UserName == "admin" && Credentials.Password == "password")
             {
+
+                //Creating Security Context
                 var claims = new List<Claim> {
                     new Claim(ClaimTypes.Name, "admin"),
                     new Claim(ClaimTypes.Email, "admin@admin.com")
