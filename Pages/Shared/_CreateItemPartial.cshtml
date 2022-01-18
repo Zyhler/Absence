@@ -1,7 +1,7 @@
 ﻿@if (User.Identity.IsAuthenticated)
 {
     if(User.HasClaim("Department", "Admin")){ 
-    <form method="post"  asp-page="/Items/GetAllItems">
+    <form method="get"  asp-page="/Items/GetAllItems">
          <button type ="submit" class="nav-link text-dark btn shadow-none">Item Directory</button>
      </form>
     }
