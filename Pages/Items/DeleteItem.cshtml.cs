@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Absence.Pages.Item
 {
-    [Authorize(Policy = "MustBeAdmin")]
+  [Authorize(Policy = "MustBeAdmin")]
     public class DeleteItemModel : PageModel
     {
         private ItemService itemService;

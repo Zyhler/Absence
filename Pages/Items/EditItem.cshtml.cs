@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Absence.Pages.Shop
 {
-    [Authorize(Policy = "MustBeAdmin")]
+  [Authorize(Policy = "MustBeAdmin")]
     public class EditItemModel : PageModel
     {
         private ItemService itemService;
