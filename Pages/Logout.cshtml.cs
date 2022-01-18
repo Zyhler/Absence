@@ -17,5 +17,10 @@ namespace Absence.Pages
             HttpContext.SignOutAsync();
             RedirectToPage("index");
         }
+        public async Task<IActionResult> OnPostAsync()
+        {
+            await HttpContext.SignOutAsync("MyCookieAuth");
+            return RedirectToPage("/Index");
+        }
     }
 }

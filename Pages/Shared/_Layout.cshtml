@@ -39,25 +39,9 @@
 
                     </ul>
                     <ul class="navbar-nav flex-grow-1">
-                        @*@if (ViewData["Logstatus"] == "Logout")
-                        {
-                            <li id="logout" class="nav-item">
-                                <form method="post">
-                                    <button type="submit" class="nav-link btn btn-link"></button>
-                                </form>
-                                <a class="nav-link text-dark" asp-area="" asp-page="/Logout">Logout</a>
-                            </li>
-                        }*@
-                        @*else
-                        {*@
-                            <li id="LoginLink" class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-page="/login">login</a>
-                            </li>
-                        @*}*@
-
-
-
-
+                     
+                        
+                        <partial name="_LoginStatusPartial" />
 
                     </ul>
                     <div id="LoggedInMenu" class="dropdown invisible">

@@ -29,10 +29,10 @@ namespace Absence.Pages
         }
         public void AssignID()
         {
-            //foreach (Models.Item oneItem in items)
-            //{
-            //    oneItem.Id = items.IndexOf(oneItem) + 1;
-            //}
+            foreach (Models.Item oneItem in items)
+            {
+                oneItem.Id = items.IndexOf(oneItem) + 1;
+            }
             Item.Id = items.Last().Id + 1;
         }
         public IActionResult OnGet()
