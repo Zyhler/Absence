@@ -1,7 +1,10 @@
 ﻿@page "{handler?}"
 @using System.Security.Claims
 @using Microsoft.Extensions.DependencyInjection
-@ViewData["Title"] = "GetAllItems"
+@{
+    ViewData["Title"] = "GetAllItems";
+}
+
 @model Absence.Pages.ShopModel
 
 <h1>Shop</h1>

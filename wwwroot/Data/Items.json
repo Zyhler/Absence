@@ -26,7 +26,12 @@
   },
   {
     "Id": 6,
-    "Name": "Viking",
-    "Price": 1234
+    "Name": "Viking Mj\u00F8d fra \u00F8degaard",
+    "Price": 120
+  },
+  {
+    "Id": 7,
+    "Name": "32423432",
+    "Price": 23423423432
   }
 ]
