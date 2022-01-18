@@ -1,10 +1,9 @@
 ﻿@page "{handler?}"
 @using System.Security.Claims
 @using Microsoft.Extensions.DependencyInjection
-@model Absence.Pages.GetAllItemsModel
-@{
-    var req = "UpdateDis";
-}
+@ViewData["Title"] = "GetAllItems"
+@model Absence.Pages.ShopModel
+
 <h1>Shop</h1>
 <br />
 <div class="row">
@@ -103,4 +102,3 @@
 </p>
 <br />
 
-<p>text: @req</p>

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Net;
+using System.Reflection.Metadata.Ecma335;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Absence.Models;
@@ -23,41 +24,10 @@ namespace Absence.Pages
     public class GetAllItemsModel : PageModel
     {
 
-      
+     
 
-        //public string UpdateCheck = "Not Updated";
-        private ItemService itemService;
-        public List<Models.Item> Items { get; private set; }
-        [BindProperty] public string SearchString { get; set; }
-        [BindProperty] public int MaxPrice { get; set; }
-        [BindProperty] public int MinPrice { get; set; }
 
-        public GetAllItemsModel(ItemService itemService) //Dependency Injection
-        {
-            this.itemService = itemService;
-        }
-
-        public IActionResult OnGet()
-        {
-            //if (MyAuthCookie == false)
-            //{
-            //    return RedirectToPage("Index");
-            //}
-            Items = itemService.GetItems().ToList();
-            return Page();
-        }
-
-        public IActionResult OnPostNameSearch()
-        {
-            //UpdateCheck = "updated";
-            Items = itemService.NameSearch(SearchString).ToList();
-            return Page();
-        }
-
-        public IActionResult OnPostPriceFilter(int maxPrice, int minPrice = 0)
-        {
-            Items = itemService.PriceFilter(maxPrice, minPrice).ToList();
-            return Page();
-        }
     }
+  
+
 }
